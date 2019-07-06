@@ -1,0 +1,5 @@
+{
+    "require": {
+        "printful/php-api-sdk": "^2.1"
+    }
+}

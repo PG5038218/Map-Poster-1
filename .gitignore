@@ -1,0 +1,7 @@
+**/*.zip
+vendor
+database
+.*.swp
+/application/catalog/logs
+/application/catalog/config/database.php
+/application/catalog/config/database.php

@@ -1,0 +1,57 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "9908e5aca263b9cce18d205b095e89ec",
+    "content-hash": "98400f13a2b111b203af79f240760f96",
+    "packages": [
+        {
+            "name": "printful/php-api-sdk",
+            "version": "v2.1.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/printful/php-api-sdk.git",
+                "reference": "00c9ba163d523c1280a0ad70baa828f8c9b23589"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/printful/php-api-sdk/zipball/00c9ba163d523c1280a0ad70baa828f8c9b23589",
+                "reference": "00c9ba163d523c1280a0ad70baa828f8c9b23589",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Printful\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Printful",
+                    "email": "dev@theprintful.com"
+                }
+            ],
+            "description": "Printful API wrapper",
+            "time": "2017-12-18 11:31:05"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

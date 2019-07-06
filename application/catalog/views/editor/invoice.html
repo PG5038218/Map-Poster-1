@@ -1,0 +1,196 @@
+<p>
+	<meta charset="utf-8" />
+	<style type="text/css">
+.invoice-box table tr td:nth-child(2){text-align:right;}
+@media only screen and (max-width: 600px) {
+.invoice-box table tr.top table td{width:100%;display:block;text-align:center;}
+.invoice-box table tr.information table td{width:100%;display:block;text-align:center;}
+}	</style>
+</p>
+<div style="max-width:800px;margin:auto;padding:30px;border:1px solid #eee;box-shadow:0 0 10px rgba(0, 0, 0, .15);font-size:16px;line-height:24px;font-family:'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;color:#555;">
+	<table cellpadding="0" cellspacing="0" style="width:100%;line-height:inherit;text-align:left;">
+		<tbody>
+			<tr class="top">
+				<td colspan="4">
+					<table  style="width:100%;line-height:inherit;text-align:left;">
+						<tbody>
+							<tr>
+								<td class="title" style="padding:5px;vertical-align:top;padding-bottom:20px;font-size:45px;line-height:45px;color:#333;">
+									<img src="https://mapify.es/img/logo-inner.png" style="width: 251px; max-width: 300px; height: 60px;" /></td>
+								<td style="padding:5px;vertical-align:top;padding-bottom:20px;text-align: right;">
+									Factura#: {%invoice_no%}<br />
+									Fecha: {%invoice_date%}<br />
+									VAT No: 1234567890</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr class="information">
+				<td colspan="4">
+					<table>
+						<tbody>
+							<tr>
+								<td style="padding:5px;vertical-align:top;padding-bottom:40px;">
+									{%owner_name%}<br />
+									{%owner_location%}<br />
+									{%owner_phone}<br />
+									{%owner_email}</td>
+								<td style="padding:5px;vertical-align:top;padding-bottom:40px;text-align: right;">
+									{%customer_name%}<br />
+									{%customer_location}<br />
+									{%customer_mobile}<br />
+									{%customer_email}</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr class="heading">
+				<td style="padding:5px;vertical-align:top;background:#eee;border-bottom:1px solid #ddd;font-weight:bold;">
+					MAPA</td>
+				<td class="text-center" style="text-align:center !important;padding:5px;vertical-align:top;background:#eee;border-bottom:1px solid #ddd;font-weight:bold;">
+					CANTIDAD</td>
+				<td class="text-center" style="text-align:center !important;padding:5px;vertical-align:top;background:#eee;border-bottom:1px solid #ddd;font-weight:bold;">
+					Precio</td>
+				<td style="padding:5px;vertical-align:top;background:#eee;border-bottom:1px solid #ddd;font-weight:bold;">
+					Total incluido IVA</td>
+			</tr>
+			<!--row_start-->
+			<tr class="item">
+				<td style="padding:5px;vertical-align:top;border-bottom:1px solid #eee;">
+					{%map_name%}</td>
+				<td class="text-center" style="text-align:center !important;padding:5px;vertical-align:top;border-bottom:1px solid #eee;">
+					{%map_qty%}</td>
+				<td class="text-center" style="text-align:center !important;padding:5px;vertical-align:top;border-bottom:1px solid #eee;">
+					{%map_price%}</td>
+				<td style="padding:5px;vertical-align:top;">
+					{%map_price%}</td>
+			</tr>
+			<!--row_end-->
+                        <tr class="item">
+                            <td style="padding:5px;vertical-align:top;border-bottom:1px solid #eee;border-bottom:none;"></td>
+				<td class="text-center" style="text-align:center !important;padding:5px;vertical-align:top;border-bottom:1px solid #eee;border-bottom:none;"></td>
+				<td class="text-center" style="text-align:center !important;padding:5px;vertical-align:top;border-bottom:1px solid #eee;border-bottom:none;"></td>
+				<td style="padding:5px;vertical-align:top;border-bottom:none;"></td>
+			</tr>
+			<tr class="total">
+				<td style="padding:5px;vertical-align:top;">
+					&nbsp;</td>
+				<td style="padding:5px;vertical-align:top;">
+					&nbsp;</td>
+				<td style="padding:5px;vertical-align:top;">
+					&nbsp;</td>
+				<td style="padding:5px;vertical-align:top;border-top:2px solid #eee;font-weight:bold;">
+					Total: {%total_amount%}&nbsp;&euro;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p class="thankyou">
+    <span style="background: #45D06B;border-radius: 5px;color: #fff;display: table;float: none;font-size: 51px;margin: 30px auto 20px;padding: 10px 25px;font-family: roboto;">Gracias</span>
+</p>
+
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	<meta charset="utf-8" />
+	<style type="text/css">
+.invoice-box{max-width:800px;margin:auto;padding:30px;border:1px solid #eee;box-shadow:0 0 10px rgba(0, 0, 0, .15);font-size:16px;line-height:24px;font-family:'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;color:#555;}
+.invoice-box table{width:100%;line-height:inherit;text-align:left;}
+.invoice-box table td{padding:5px;vertical-align:top;}
+.invoice-box table tr td:nth-child(2){text-align:right;}
+.invoice-box table tr.top table td{padding-bottom:20px;}
+.invoice-box table tr.top table td.title{font-size:45px;line-height:45px;color:#333;}
+.invoice-box table tr.information table td{padding-bottom:40px;}
+.invoice-box table tr.heading td{background:#eee;border-bottom:1px solid #ddd;font-weight:bold;}
+.invoice-box table tr.details td{padding-bottom:20px;}
+.invoice-box table tr.item td{border-bottom:1px solid #eee;}
+.invoice-box table tr.item.last td{border-bottom:none;}
+.invoice-box table tr.total td:nth-child(4){border-top:2px solid #eee;font-weight:bold;}
+.thankyou span {background: #45D06B;border-radius: 5px;color: #fff;display: table;float: none;font-size: 51px;margin: 30px auto 20px;padding: 10px 25px;font-family: roboto;}
+.text-center{text-align:center !important;}
+@media only screen and (max-width: 600px) {
+.invoice-box table tr.top table td{width:100%;display:block;text-align:center;}
+.invoice-box table tr.information table td{width:100%;display:block;text-align:center;}
+}	</style>
+</p>
+<div class="invoice-box">
+	<table cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr class="top">
+				<td colspan="4">
+					<table>
+						<tbody>
+							<tr>
+								<td class="title">
+									<img src="/projects/mapify/html/img/logo-inner.png" style="width: 251px; max-width: 300px; height: 60px;" /></td>
+								<td>
+									Factura#: {%invoice_no%}<br />
+									Fecha: {%invoice_date%}</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr class="information">
+				<td colspan="4">
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									{%owner_name%}<br />
+									{%owner_location%}<br />
+									{%owner_phone}<br />
+									{%owner_email}</td>
+								<td>
+									{%customer_name%}<br />
+									{%customer_location}<br />
+									{%customer_mobile}<br />
+									{%customer_email}</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr class="heading">
+				<td>
+					MAPA</td>
+				<td class="text-center">
+					CANTIDAD</td>
+				<td class="text-center">
+					Precio</td>
+				<td>
+					Total incluido IVA</td>
+			</tr>
+			<!--row_start-->
+			<tr class="item">
+				<td>
+					{%map_name%}</td>
+				<td class="text-center">
+					{%map_qty%}</td>
+				<td class="text-center">
+					{%map_price%}</td>
+				<td>
+					{%map_price%}</td>
+			</tr>
+			<!--row_end-->
+			<tr class="total">
+				<td>
+					&nbsp;</td>
+				<td>
+					&nbsp;</td>
+				<td>
+					&nbsp;</td>
+				<td>
+					Total: {%total_amount%}&nbsp;&euro;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p class="thankyou">
+	<span>Gracias</span></p>
